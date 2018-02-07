@@ -11,7 +11,7 @@
 <ion-content padding>
   <div padding>
     <ion-segment [(ngModel)]="nav">
-      <ion-segment-button value="Home">
+      <ion-segment-button value="Discovery">
         Discovery
       </ion-segment-button>
       <ion-segment-button value="Menu">
@@ -25,7 +25,7 @@
   </div>
 
   <div [ngSwitch]="nav">
-    <ion-list *ngSwitchCase="'Menu'">
+    <ion-list *ngSwitchCase="'Menu'" (load)=startUpMenu()>
       <ion-card>
         <img src="http://via.placeholder.com/350x150" />
         <ion-card-content>
@@ -35,6 +35,9 @@
           <p>
             The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
           </p>
+          <ion-item>
+            <button ion-button clear item-end [navPush]="fancyButton">Get Cooking</button>
+          </ion-item>
         </ion-card-content>
       </ion-card>
       <ion-card>

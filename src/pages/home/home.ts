@@ -7,7 +7,13 @@ import { NavController, LoadingController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {}
+  fancyButton: any;
+  nav: string = "Discovery";
+
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
+    this.fancyButton ='../../recipe/recipe.html';
+  }
+  
   // loading 
   presentLoading() {
     this.loadingCtrl.create({
