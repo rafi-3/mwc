@@ -10,10 +10,12 @@ import { RecipePage } from '../recipe/recipe';
 export class HomePage {
 
   fancyButton: any;
+  
+  // to set segment as start up home page
   nav: string = "Discovery";
 
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
-    this.fancyButton ='../recipe/recipe';
+    this.fancyButton ='RecipePage';
   }
   
   // loading 

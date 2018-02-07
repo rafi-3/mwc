@@ -5,10 +5,7 @@
     </button>
     <ion-title>Meals2Go</ion-title>
   </ion-navbar>
-</ion-header>
-
-
-<ion-content padding>
+  
   <div padding>
     <ion-segment [(ngModel)]="nav">
       <ion-segment-button value="Discovery">
@@ -20,9 +17,14 @@
       <ion-segment-button value="Pricing">
         Pricing
       </ion-segment-button>
-
+  
     </ion-segment>
   </div>
+</ion-header>
+
+
+<ion-content padding>
+ 
 
   <div [ngSwitch]="nav">
     <ion-list *ngSwitchCase="'Menu'" (load)=startUpMenu()>
