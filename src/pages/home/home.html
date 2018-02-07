@@ -3,16 +3,112 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Meals2Go</ion-title>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <div padding>
+    <ion-segment [(ngModel)]="nav">
+      <ion-segment-button value="Home">
+        Discovery
+      </ion-segment-button>
+      <ion-segment-button value="Menu">
+        Menu
+      </ion-segment-button>
+      <ion-segment-button value="Pricing">
+        Pricing
+      </ion-segment-button>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    </ion-segment>
+  </div>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div [ngSwitch]="nav">
+    <ion-list *ngSwitchCase="'Menu'">
+      <ion-card>
+        <img src="http://via.placeholder.com/350x150" />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="http://via.placeholder.com/350x150" />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="http://via.placeholder.com/350x150" />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="http://via.placeholder.com/350x150" />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Home'">
+      ...
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Pricing'">
+<!-- no of serving -->
+      <ion-list>
+        <ion-item>
+          <ion-label>Serving</ion-label>
+          <ion-select [(ngModel)]="serving">
+            <ion-option value="2persons">2 Persons</ion-option>
+            <ion-option value="4persons">4 Persons</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+<!-- no of weeks -->
+      <ion-list>
+        <ion-item>
+          <ion-label>Subscription</ion-label>
+          <ion-select [(ngModel)]="serving">
+            <ion-option value="2weeks">2 weeks</ion-option>
+            <ion-option value="4weeks">4 weeks</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+<!-- vegetarian option -->
+<ion-list>
+  <ion-item>
+    <ion-label>Vegan Option</ion-label>
+    <ion-select [(ngModel)]="serving">
+      <ion-option value="yes">Yes</ion-option>
+      <ion-option value="no">No</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+  <button ion-button block (click)="presentLoading()">Proceed Payment</button>
+    </ion-list>
+
+  </div>
 </ion-content>
