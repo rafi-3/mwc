@@ -18,7 +18,7 @@ export class HomePage {
     this.fancyButton ='RecipePage';
   }
   
-  // loading 
+  // loading test
   presentLoading() {
     this.loadingCtrl.create({
       content: 'Redirecting...',
