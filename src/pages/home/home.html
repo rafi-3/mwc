@@ -27,59 +27,81 @@
  
 
   <div [ngSwitch]="nav">
-    <ion-list *ngSwitchCase="'Menu'" (load)=startUpMenu()>
-      <ion-card>
-        <img src="http://via.placeholder.com/350x150" />
-        <ion-card-content>
-          <ion-card-title>
-            Nine Inch Nails Live
-          </ion-card-title>
-          <p>
-            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-          </p>
-          <ion-item>
-            <button ion-button clear item-end [navPush]="fancyButton">Get Cooking</button>
-          </ion-item>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <img src="http://via.placeholder.com/350x150" />
-        <ion-card-content>
-          <ion-card-title>
-            Nine Inch Nails Live
-          </ion-card-title>
-          <p>
-            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-          </p>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <img src="http://via.placeholder.com/350x150" />
-        <ion-card-content>
-          <ion-card-title>
-            Nine Inch Nails Live
-          </ion-card-title>
-          <p>
-            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-          </p>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <img src="http://via.placeholder.com/350x150" />
-        <ion-card-content>
-          <ion-card-title>
-            Nine Inch Nails Live
-          </ion-card-title>
-          <p>
-            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-          </p>
-        </ion-card-content>
-      </ion-card>
+    
+    <ion-list *ngSwitchCase="'Discovery'">
+      <ion-slides pager>
+        <ion-slide *ngFor="let slide of slides">
+          <ion-toolbar>
+            <ion-buttons end>
+              <button ion-button color="primary">Skip</button>
+            </ion-buttons>
+          </ion-toolbar>
+          <img [src]="slide.image" class="slide-image" />
+          <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+          <p [innerHTML]="slide.description"></p>
+        </ion-slide>
+        <ion-slide>
+          <ion-toolbar>
+          </ion-toolbar>
+          <img src="http://via.placeholder.com/350x150" class="slide-image" />
+          <h2 class="slide-title">Ready to Play?</h2>
+          <button ion-button large clear icon-end color="primary" [navPush]="fancyButton">
+            Continue
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </ion-slide>
+      </ion-slides>
     </ion-list>
 
-    <ion-list *ngSwitchCase="'Home'">
-      ...
-    </ion-list>
+    <ion-list *ngSwitchCase="'Menu'">
+          <ion-card>
+            <img src="http://via.placeholder.com/350x150" />
+            <ion-card-content>
+              <ion-card-title>
+                Nine Inch Nails Live
+              </ion-card-title>
+              <p>
+                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+              </p>
+              <ion-item>
+                <button ion-button clear item-end [navPush]="fancyButton">Get Cooking</button>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <img src="http://via.placeholder.com/350x150" />
+            <ion-card-content>
+              <ion-card-title>
+                Nine Inch Nails Live
+              </ion-card-title>
+              <p>
+                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+              </p>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <img src="http://via.placeholder.com/350x150" />
+            <ion-card-content>
+              <ion-card-title>
+                Nine Inch Nails Live
+              </ion-card-title>
+              <p>
+                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+              </p>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <img src="http://via.placeholder.com/350x150" />
+            <ion-card-content>
+              <ion-card-title>
+                Nine Inch Nails Live
+              </ion-card-title>
+              <p>
+                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
 
     <ion-list *ngSwitchCase="'Pricing'">
 <!-- no of serving -->
