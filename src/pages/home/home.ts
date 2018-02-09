@@ -8,14 +8,19 @@ import { RecipePage } from '../recipe/recipe';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  // button to specific page
+  recipeButton: any;
+  menuButton: any;
+ 
 
-  fancyButton: any;
   
   // to set segment as start up home page
   nav: string = "Discovery";
 
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
-    this.fancyButton ='RecipePage';
+    // button to specific page(controller)
+    this.recipeButton ='RecipePage';
+    this.menuButton ='Menu';
   }
   
   // loading test
@@ -28,17 +33,17 @@ export class HomePage {
   }
   slides = [
     {
-      title: "Welcome to the Docs!",
+      title: "Welcome to Meals2Go",
       description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
       image: "http://via.placeholder.com/350x150",
     },
     {
-      title: "What is Ionic?",
+      title: "Get started",
       description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
       image: "http://via.placeholder.com/350x150",
     },
     {
-      title: "What is Ionic Cloud?",
+      title: "Learn About Pricing",
       description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
       image: "http://via.placeholder.com/350x150",
     }
