@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 
 import { RecipePage } from '../recipe/recipe';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -10,9 +11,7 @@ import { RecipePage } from '../recipe/recipe';
 export class HomePage {
   // button to specific page
   recipeButton: any;
-  menuButton: any;
- 
-
+  loginButton: any;
   
   // to set segment as start up home page
   nav: string = "Discovery";
@@ -20,7 +19,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
     // button to specific page(controller)
     this.recipeButton ='RecipePage';
-    this.menuButton ='Menu';
+    this.loginButton = 'LoginButton';
   }
   
   // loading test
