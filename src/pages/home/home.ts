@@ -19,7 +19,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
     // button to specific page(controller)
     this.recipeButton ='RecipePage';
-    this.loginButton = 'LoginButton';
+    this.loginButton = 'LoginPage';
   }
   
   // loading test
