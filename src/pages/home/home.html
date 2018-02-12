@@ -6,6 +6,7 @@
     <ion-title>Meals2Go</ion-title>
   </ion-navbar>
   
+  <!-- this is for top navigation menu aka Segment -->
   <div padding>
     <ion-segment [(ngModel)]="nav">
       <ion-segment-button value="Discovery">
@@ -27,14 +28,16 @@
  
 
   <div [ngSwitch]="nav">
-    
+
+
+    <!-- Discovery Page -->
     <ion-list *ngSwitchCase="'Discovery'">
       <ion-slides pager>
         <ion-slide *ngFor="let slide of slides">
           <ion-toolbar>
-            <ion-buttons end>
+            <!-- <ion-buttons end>
               <button ion-button color="primary">Skip</button>
-            </ion-buttons>
+            </ion-buttons> -->
           </ion-toolbar>
           <img [src]="slide.image" class="slide-image" />
           <h2 class="slide-title" [innerHTML]="slide.title"></h2>
@@ -44,15 +47,45 @@
           <ion-toolbar>
           </ion-toolbar>
           <img src="http://via.placeholder.com/350x150" class="slide-image" />
-          <h2 class="slide-title">Ready to Play?</h2>
-          <button ion-button large clear icon-end color="primary" [navPush]="fancyButton">
-            Continue
+          <h2 class="slide-title">Ready to Cook?</h2>
+          <button ion-button large clear icon-end color="primary" [navPush]="recipeButton">
+            Try our sample!
             <ion-icon name="arrow-forward"></ion-icon>
           </button>
         </ion-slide>
       </ion-slides>
+
+      <ion-card>
+        <ion-card-header>
+          What is Meals2Go
+        </ion-card-header>
+        <ion-card-content>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quasi enim similique aperiam quos laboriosam, repellat repudiandae, 
+          doloremque recusandae architecto ipsa veniam tempora ullam officiis soluta adipisci. Nobis, sit omnis.
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          What is Meals2Go
+        </ion-card-header>
+        <ion-card-content>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quasi enim similique aperiam quos laboriosam, repellat repudiandae,
+          doloremque recusandae architecto ipsa veniam tempora ullam officiis soluta adipisci. Nobis, sit omnis.
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          What is Meals2Go
+        </ion-card-header>
+        <ion-card-content>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quasi enim similique aperiam quos laboriosam, repellat repudiandae,
+          doloremque recusandae architecto ipsa veniam tempora ullam officiis soluta adipisci. Nobis, sit omnis.
+        </ion-card-content>
+      </ion-card>
     </ion-list>
 
+
+<!-- Menu Page -->
     <ion-list *ngSwitchCase="'Menu'">
           <ion-card>
             <img src="http://via.placeholder.com/350x150" />
@@ -64,7 +97,7 @@
                 The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
               </p>
               <ion-item>
-                <button ion-button clear item-end [navPush]="fancyButton">Get Cooking</button>
+                <button ion-button clear item-end [navPush]="recipeButton">Get Cooking</button>
               </ion-item>
             </ion-card-content>
           </ion-card>
@@ -103,6 +136,8 @@
           </ion-card>
         </ion-list>
 
+
+        <!-- Pricing Page -->
     <ion-list *ngSwitchCase="'Pricing'">
 <!-- no of serving -->
       <ion-list>
@@ -118,7 +153,7 @@
       <ion-list>
         <ion-item>
           <ion-label>Subscription</ion-label>
-          <ion-select [(ngModel)]="serving">
+          <ion-select [(ngModel)]="period">
             <ion-option value="2weeks">2 weeks</ion-option>
             <ion-option value="4weeks">4 weeks</ion-option>
           </ion-select>
@@ -128,7 +163,7 @@
 <ion-list>
   <ion-item>
     <ion-label>Vegan Option</ion-label>
-    <ion-select [(ngModel)]="serving">
+    <ion-select [(ngModel)]="vegan">
       <ion-option value="yes">Yes</ion-option>
       <ion-option value="no">No</ion-option>
     </ion-select>
