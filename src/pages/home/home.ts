@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController } from 'ionic-angular';
+import { NavController, LoadingController,ToastController } from 'ionic-angular';
+
+// welcome screen
+import { AngularFireAuth } from 'angularfire2/auth';
 
 import { RecipePage } from '../recipe/recipe';
 import { LoginPage } from '../login/login';
@@ -16,12 +19,29 @@ export class HomePage {
   // to set segment as start up home page
   nav: string = "Discovery";
 
-  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
+  // hujung hujung ne yg aFauth ah
+  constructor(private aFauth: AngularFireAuth, private toast: ToastController, 
+    public navCtrl: NavController, public loadingCtrl: LoadingController) {
     // button to specific page(controller)
     this.recipeButton ='RecipePage';
     this.loginButton = 'LoginPage';
   }
   
+  ionViewWillLoad() {
+    this.aFauth.authState.subscribe(data => console.log(data))
+    if(data.email && data.uid){ 
+    this.toast.create({
+        message: 'Welcome Back, ${data.email}',
+        duration: 3000
+      }).present();
+  } else {
+    this.toast.create({
+      message: 'Please Register',
+      duration: 3000
+    }).present();
+  }
+}
+
   // loading test
   presentLoading() {
     this.loadingCtrl.create({
