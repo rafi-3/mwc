@@ -27,20 +27,20 @@ export class HomePage {
     this.loginButton = 'LoginPage';
   }
   
-  ionViewWillLoad() {
-    this.aFauth.authState.subscribe(data => console.log(data))
-    if(data.email && data.uid){ 
-    this.toast.create({
-        message: 'Welcome Back, ${data.email}',
-        duration: 3000
-      }).present();
-  } else {
-    this.toast.create({
-      message: 'Please Register',
-      duration: 3000
-    }).present();
-  }
-}
+//   ionViewWillLoad() {
+//     this.aFauth.authState.subscribe(data => console.log(data))
+//     if(data && data.email && data.uid){ 
+//     this.toast.create({
+//         message: 'Welcome Back, ${data.email}',
+//         duration: 3000
+//       }).present();
+//   } else {
+//     this.toast.create({
+//       message: 'Please Register',
+//       duration: 3000
+//     }).present();
+//   }
+// }
 
   // loading test
   presentLoading() {
