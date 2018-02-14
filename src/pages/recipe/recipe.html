@@ -32,45 +32,25 @@
     <ion-list *ngSwitchCase="'Ingredients'">
       <ion-item>
 
-        <ion-list>
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="http://via.placeholder.com/10x30">
-            </ion-thumbnail>
-            <h2>bahan</h2>
-            <p>gram</p>
-          </ion-item>
-        </ion-list>
+        <!-- <ion-item>
+          <ion-label floating>Ingredient</ion-label>
+          <ion-input type="text" [(ngModel)]="ingredientItem.ingredientName"></ion-input>
+        </ion-item>
 
-        <ion-list>
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="http://via.placeholder.com/10x30">
-            </ion-thumbnail>
-            <h2>bahan</h2>
-            <p>gram</p>
-          </ion-item>
-        </ion-list>
-        
-        <ion-list>
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="http://via.placeholder.com/10x30">
-            </ion-thumbnail>
-            <h2>bahan</h2>
-            <p>gram</p>
-          </ion-item>
-        </ion-list>
-        
-        <ion-list>
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="http://via.placeholder.com/10x30">
-            </ion-thumbnail>
-            <h2>bahan</h2>
-            <p>gram</p>
-          </ion-item>
-        </ion-list>
+        <ion-item>
+          <ion-label floating>Amount</ion-label>
+          <ion-input type="text" [(ngModel)]="ingredientItem.ingredientNumber"></ion-input>
+        </ion-item>
+
+        <button ion-button block (click)="addIngredientItem(ingredientItem)">Add ingredient</button> -->
+
+
+<!-- ion item repeat according to the ingredient list in database -->
+       <ion-list>
+         <ion-item *ngFor="let item of ingredientListRef$ |async"></ion-item>
+         <h2>Ingredient : {{item.ingredientName}}</h2>
+         <h3>Amount : {{item.ingredientNumber}}</h3>
+       </ion-list>
 
       </ion-item>
     </ion-list>

@@ -4,8 +4,13 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Meals2Go</ion-title>
-  </ion-navbar>
+
+    <!-- this need alignment, fixed asap-->
+  <button ion-button [navPush]="loginButton">
+    Sign Up
+  </button>
   
+  </ion-navbar>
   <!-- this is for top navigation menu aka Segment -->
   <div padding>
     <ion-segment [(ngModel)]="nav">
@@ -21,6 +26,7 @@
   
     </ion-segment>
   </div>
+
 </ion-header>
 
 
