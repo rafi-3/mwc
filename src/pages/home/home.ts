@@ -7,6 +7,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { RecipePage } from '../recipe/recipe';
 import { LoginPage } from '../login/login';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -39,10 +40,10 @@ export class HomePage {
         duration: 3000
       }).present();
   } else {
-    this.toast.create({
-      message: 'Please Register',
-      duration: 3000
-    }).present();
+    // this.toast.create({
+    //   message: 'Please Register',
+    //   duration: 3000
+    // }).present();
   }
 }
 
