@@ -1,16 +1,37 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Meals2Go</ion-title>
+    
+    
 
     <!-- this need alignment, fixed asap-->
-  <button ion-button [navPush]="loginButton">
-    Sign Up
-  </button>
   
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div>
+            <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          </div>
+        </ion-col>
+        <ion-col col-6>
+          <div>
+            <ion-title>Meals2Go</ion-title>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <button ion-button [navPush]="loginButton" clear>
+            Sign Up
+            </button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-navbar>
+    
+
   <!-- this is for top navigation menu aka Segment -->
   <div padding class="my-component">
     <ion-segment [(ngModel)]="nav" class="my-component">
