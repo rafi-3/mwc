@@ -60,8 +60,8 @@ export class HomePage {
   slides = [
     {
       title: "Welcome to Meals2Go",
-      description: "Meals2G makes cooking fun and easy. We'll provide you with all the ingredients that you need to make a delicious meal in exactly the right proportions.",
-      image: "http://via.placeholder.com/350x150",
+      description: "Meals2Go makes cooking fun and easy. We'll provide you with all the ingredients that you need to make a delicious meal in exactly the right proportions.",
+      image: "assets/img/banner1.png",
     },
     {
       title: "Get started",
