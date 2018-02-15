@@ -55,6 +55,8 @@ export class HomePage {
       dismissOnPageChange: true
     }).present();
   }
+
+  // this is for discovery banner
   slides = [
     {
       title: "Welcome to Meals2Go",
