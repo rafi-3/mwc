@@ -60,7 +60,7 @@ export class HomePage {
   slides = [
     {
       title: "Welcome to Meals2Go",
-      description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
+      description: "Meals2Go makes cooking fun and easy. We'll provide you with all the ingredients that you need to make a delicious meal in exactly the right proportions.",
       image: "http://via.placeholder.com/350x150",
     },
     {
