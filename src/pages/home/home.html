@@ -1,11 +1,6 @@
 <ion-header>
   <ion-navbar>
-    
-    
-
-    <!-- this need alignment, fixed asap-->
-  
-    
+<!-- nav bar  -->
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -17,12 +12,12 @@
         </ion-col>
         <ion-col col-6>
           <div>
-            <ion-title>Meals2Go</ion-title>
+            <ion-title text-center>Meals2Go</ion-title>
           </div>
         </ion-col>
-        <ion-col>
+        <ion-col justify-content-end>
           <div>
-            <button ion-button [navPush]="loginButton" clear>
+            <button ion-button [navPush]="loginButton" clear >
             Sign Up
             </button>
           </div>
@@ -51,7 +46,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="background-everything">
  
 
   <div [ngSwitch]="nav">
