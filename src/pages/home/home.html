@@ -12,8 +12,8 @@
   
   </ion-navbar>
   <!-- this is for top navigation menu aka Segment -->
-  <div padding>
-    <ion-segment [(ngModel)]="nav">
+  <div padding class="my-component">
+    <ion-segment [(ngModel)]="nav" class="my-component">
       <ion-segment-button value="Discovery">
         Discovery
       </ion-segment-button>
@@ -40,11 +40,11 @@
     <ion-list *ngSwitchCase="'Discovery'">
       <ion-slides pager>
         <ion-slide *ngFor="let slide of slides">
-          <ion-toolbar>
-            <!-- <ion-buttons end>
+          <!-- <ion-toolbar>
+            <ion-buttons end>
               <button ion-button color="primary">Skip</button>
-            </ion-buttons> -->
-          </ion-toolbar>
+            </ion-buttons>
+          </ion-toolbar> -->
           <img [src]="slide.image" class="slide-image" />
           <h2 class="slide-title" [innerHTML]="slide.title"></h2>
           <p [innerHTML]="slide.description"></p>
