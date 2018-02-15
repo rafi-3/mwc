@@ -7,11 +7,15 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { RecipePage } from '../recipe/recipe';
 import { LoginPage } from '../login/login';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  data: any = {
+    email: "test@pb.edu.bn"
+  };
   // button to specific page
   recipeButton: any;
   loginButton: any;
@@ -27,20 +31,21 @@ export class HomePage {
     this.loginButton = 'LoginPage';
   }
   
-//   ionViewWillLoad() {
-//     this.aFauth.authState.subscribe(data => console.log(data))
-//     if(data && data.email && data.uid){ 
-//     this.toast.create({
-//         message: 'Welcome Back, ${data.email}',
-//         duration: 3000
-//       }).present();
-//   } else {
-//     this.toast.create({
-//       message: 'Please Register',
-//       duration: 3000
-//     }).present();
-//   }
-// }
+  ionViewWillLoad() {
+    this.aFauth.authState.subscribe(data => console.log(data))
+    // if(data && data.email && data.uid){
+  if (true){ 
+    this.toast.create({
+        message: 'Welcome Back, ' + this.data.email,
+        duration: 3000
+      }).present();
+  } else {
+    // this.toast.create({
+    //   message: 'Please Register',
+    //   duration: 3000
+    // }).present();
+  }
+}
 
   // loading test
   presentLoading() {
@@ -50,6 +55,8 @@ export class HomePage {
       dismissOnPageChange: true
     }).present();
   }
+
+  // this is for discovery banner
   slides = [
     {
       title: "Welcome to Meals2Go",

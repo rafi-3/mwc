@@ -6,6 +6,8 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { auth } from 'firebase/app';
 
 import { HomePage } from '../home/home';
+
+
 @IonicPage()
 @Component({
   selector: 'page-login',
