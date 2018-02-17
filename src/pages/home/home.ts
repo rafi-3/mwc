@@ -60,17 +60,17 @@ export class HomePage {
   slides = [
     {
       title: "Welcome to Meals2Go",
-      description: "Meals2Go makes cooking fun and easy. We'll provide you with all the ingredients that you need to make a delicious meal in exactly the right proportions.",
-      image: "../../assets/imgs/banner1.png",
+      description: "Fresh Ingredients. Original Recipes. Delivered To You.",
+      image: "https://i.imgur.com/54jMjox.png",
     },
     {
       title: "Get started",
-      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
+      description: "Order our top-rated recipes today!",
       image: "http://via.placeholder.com/350x150",
     },
     {
-      title: "Learn About Pricing",
-      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
+      title: "Choose your plan",
+      description: "No commitment. Skip or cancel anytime.",
       image: "http://via.placeholder.com/350x150",
     }
   ];
