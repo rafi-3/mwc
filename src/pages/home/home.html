@@ -1,18 +1,18 @@
 <ion-header>
   <ion-navbar>
-    
-    
+
+
 
     <!-- this need alignment, fixed asap-->
-  
-    
+
+
     <ion-grid>
       <ion-row>
         <ion-col>
           <div>
             <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-          </button>
+              <ion-icon name="menu"></ion-icon>
+            </button>
           </div>
         </ion-col>
         <ion-col col-6>
@@ -23,14 +23,14 @@
         <ion-col>
           <div>
             <button ion-button [navPush]="loginButton" clear>
-            Sign Up
+              Sign Up
             </button>
           </div>
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-navbar>
-    
+
 
   <!-- this is for top navigation menu aka Segment -->
   <div padding class="my-component">
@@ -44,7 +44,7 @@
       <ion-segment-button value="Pricing">
         Pricing
       </ion-segment-button>
-  
+
     </ion-segment>
   </div>
 
@@ -52,7 +52,7 @@
 
 
 <ion-content padding>
- 
+
 
   <div [ngSwitch]="nav">
 
@@ -80,86 +80,89 @@
           What is Meals2Go?
         </ion-card-header>
         <ion-card-content>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quasi enim similique aperiam quos laboriosam, repellat repudiandae, 
-          doloremque recusandae architecto ipsa veniam tempora ullam officiis soluta adipisci. Nobis, sit omnis.
+          Meals2Go is a local ingredient-and-recipe meal kit service. It makes cooking fun and easy. We'll provide you with all the
+          ingredients that you need to make a delicious meal in exactly the right proportions.
         </ion-card-content>
       </ion-card>
       <ion-card>
         <ion-card-header>
-          What is Meals2Go
+          Better Food System
         </ion-card-header>
         <ion-card-content>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quasi enim similique aperiam quos laboriosam, repellat repudiandae,
-          doloremque recusandae architecto ipsa veniam tempora ullam officiis soluta adipisci. Nobis, sit omnis.
+          We are partnering with farmers to raise the highest-quality ingredients, creating a distribution system that delivers ingredients
+          at a better value and investing in the things that matter most—our environment and our communities. This will be
+          a decades-long effort, but with each Meals2Go home chef, together we can build a better food system.
         </ion-card-content>
       </ion-card>
       <ion-card>
         <ion-card-header>
-          What is Meals2Go
+          Our Vision
         </ion-card-header>
         <ion-card-content>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quasi enim similique aperiam quos laboriosam, repellat repudiandae,
-          doloremque recusandae architecto ipsa veniam tempora ullam officiis soluta adipisci. Nobis, sit omnis.
+          ● Creating Better Standards<br>       
+          ● Regenerating Our Land<br>      
+          ● Eliminating The Middleman<br>
+          ● Reducing Food Waste<br>
         </ion-card-content>
       </ion-card>
     </ion-list>
 
 
-<!-- Menu Page -->
+    <!-- Menu Page -->
     <ion-list *ngSwitchCase="'Menu'">
-          <ion-card>
-            <img src="http://via.placeholder.com/350x150" />
-            <ion-card-content>
-              <ion-card-title>
-                Nine Inch Nails Live
-              </ion-card-title>
-              <p>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-              </p>
-              <ion-item>
-                <button ion-button clear item-end [navPush]="recipeButton">Get Cooking</button>
-              </ion-item>
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <img src="http://via.placeholder.com/350x150" />
-            <ion-card-content>
-              <ion-card-title>
-                Nine Inch Nails Live
-              </ion-card-title>
-              <p>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-              </p>
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <img src="http://via.placeholder.com/350x150" />
-            <ion-card-content>
-              <ion-card-title>
-                Nine Inch Nails Live
-              </ion-card-title>
-              <p>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-              </p>
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <img src="http://via.placeholder.com/350x150" />
-            <ion-card-content>
-              <ion-card-title>
-                Nine Inch Nails Live
-              </ion-card-title>
-              <p>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-              </p>
-            </ion-card-content>
-          </ion-card>
-        </ion-list>
+      <ion-card>
+        <img src="http://via.placeholder.com/350x150" />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+          <ion-item>
+            <button ion-button clear item-end [navPush]="recipeButton">Get Cooking</button>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="http://via.placeholder.com/350x150" />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="http://via.placeholder.com/350x150" />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="http://via.placeholder.com/350x150" />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
 
 
-        <!-- Pricing Page -->
+    <!-- Pricing Page -->
     <ion-list *ngSwitchCase="'Pricing'">
-<!-- no of serving -->
+      <!-- no of serving -->
       <ion-list>
         <ion-item>
           <ion-label>Serving</ion-label>
@@ -169,7 +172,7 @@
           </ion-select>
         </ion-item>
       </ion-list>
-<!-- no of weeks -->
+      <!-- no of weeks -->
       <ion-list>
         <ion-item>
           <ion-label>Subscription</ion-label>
@@ -179,17 +182,17 @@
           </ion-select>
         </ion-item>
       </ion-list>
-<!-- vegetarian option -->
-<ion-list>
-  <ion-item>
-    <ion-label>Vegan Option</ion-label>
-    <ion-select [(ngModel)]="vegan">
-      <ion-option value="yes">Yes</ion-option>
-      <ion-option value="no">No</ion-option>
-    </ion-select>
-  </ion-item>
-</ion-list>
-  <button ion-button block (click)="presentLoading()">Proceed Payment</button>
+      <!-- vegetarian option -->
+      <ion-list>
+        <ion-item>
+          <ion-label>Vegan Option</ion-label>
+          <ion-select [(ngModel)]="vegan">
+            <ion-option value="yes">Yes</ion-option>
+            <ion-option value="no">No</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <button ion-button block (click)="presentLoading()">Proceed Payment</button>
     </ion-list>
 
   </div>
