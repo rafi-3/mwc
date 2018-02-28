@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
 import { IngredientItem } from '../../models/ingredient-item/ingredient-item.interface';
+import { Observable } from 'rxjs/Observable';
+
 
 @IonicPage()
 @Component({
@@ -11,28 +13,12 @@ import { IngredientItem } from '../../models/ingredient-item/ingredient-item.int
 })
 export class RecipePage {
 
-  IngredientItem = {} as IngredientItem;
-
   nav: string = "Detail";
-//12-1.03mins 
-  ingredientListRef$: AngularFireList<IngredientItem[]>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams , private database: AngularFireDatabase ) {
-    this.ingredientListRef$ = this.database.list('ingredient-list');
+ items: Observable<any []>;
 
-    // this.ingredientListRef$.subscribe(x => console.log(x))
-  }
-
-// creating new item
-  addIngredientItem(ingredientItem : IngredientItem) {
-    console.log(ingredientItem);
-
-    // this.ingredientListRef$.push({
-    //   ingredientName: this.IngredientItem.ingredientName,
-    //   ingredientNumber: Number(this.IngredientItem.ingredientNumber)
-    // });
-
-
+  constructor(public navCtrl: NavController, public navParams: NavParams , afDB: AngularFireDatabase ) {
+    this.items=afDB.list('ingredient').valueChanges();
   }
 
   ionViewDidLoad() {
