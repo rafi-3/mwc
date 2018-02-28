@@ -61,19 +61,12 @@
     <ion-list *ngSwitchCase="'Discovery'">
       <ion-slides pager>
         <ion-slide *ngFor="let slide of slides">
-          <!-- <ion-toolbar>
-            <ion-buttons end>
-              <button ion-button color="primary">Skip</button>
-            </ion-buttons>
-          </ion-toolbar> -->
           <img [src]="slide.image" class="slide-image" />
           <h2 class="slide-title" [innerHTML]="slide.title"></h2>
           <p [innerHTML]="slide.description"></p>
         </ion-slide>
         <ion-slide>
-          <ion-toolbar>
-          </ion-toolbar>
-          <img src="https://i.imgur.com/XTNjaxQ.jpg0">
+          <img src="../../assets/imgs/banner1.png">
           <h2 class="slide-title">Ready to Cook?</h2>
           <button ion-button large clear icon-end color="primary" [navPush]="recipeButton">
             Try our sample!
@@ -87,7 +80,8 @@
           What is Meals2Go?
         </ion-card-header>
         <ion-card-content>
-          Meals2Go makes cooking fun and easy. We'll provide you with all the ingredients that you need to make a delicious meal in exactly the right proportions.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quasi enim similique aperiam quos laboriosam, repellat repudiandae, 
+          doloremque recusandae architecto ipsa veniam tempora ullam officiis soluta adipisci. Nobis, sit omnis.
         </ion-card-content>
       </ion-card>
       <ion-card>
