@@ -66,12 +66,12 @@ export class HomePage {
     {
       title: "Get started",
       description: "Order our top-rated recipes today!",
-      image: "http://via.placeholder.com/350x150",
+      image: "https://i.imgur.com/afw9gJQ.png",
     },
     {
       title: "Choose your plan",
       description: "No commitment. Skip or cancel anytime.",
-      image: "http://via.placeholder.com/350x150",
+      image: "https://i.imgur.com/e6r5cqd.png",
     }
   ];
 
