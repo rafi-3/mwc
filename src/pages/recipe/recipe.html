@@ -21,8 +21,8 @@
 </ion-header>
 
 <ion-content>
-  <div [ngSwitch]="nav">
-    <ion-list *ngSwitchCase="'Detail'">
+  <div [ngSwitch]="nav" >
+    <ion-list *ngSwitchCase="'Detail'"  align="center">
       <img src="https://i.imgur.com/SUJunB5.jpg"  class="img"/>
       <h1>Ambuyat</h1>
       <p><ion-icon name="flame"></ion-icon> 300 calories | <ion-icon name="time"></ion-icon> 15mins</p>
@@ -43,31 +43,36 @@
 
 
     <ion-list *ngSwitchCase="'Direction'">
-      <p>HOW TO MAKE AMBUYAT
-
-          Sago is mixed with 4 cups of water and fry for 10 minutes.
+      <div  align="center">
+        <h3>HOW TO MAKE AMBUYAT</h3>
+      </div>
+      <ol>
+         <li>Sago is mixed with 4 cups of water and fry for 10 minutes.</li> 
           
-          Pour water and place sago in a hot-water container.
+         <li> Pour water and place sago in a hot-water container.</li>
           
-          Mix sago with hot boiling water.
+         <li> Mix sago with hot boiling water.</li>
           
-          Stir until smooth and cook until sago looks clear and viscous
-          (such as the glue. It indicates that the sago is cooked).
-        
-          ALTERNATIVE WAY
-        
-          Sago flour mixed with water
+        <li>until smooth and cook until sago looks clear and viscous (such as the glue. It indicates that the sago is cooked).</li> 
+      </ol>
+      <div  align="center">
+          <i>ALTERNATIVE WAY</i><br>
+      </div>
+      <ol> 
+        <li>Sago flour mixed with water</li>
           
-          cook on a skillet with a moderate fire until it becomes viscous and solid.
-        
-        HOW TO MAKE THE SAUCE
+        <li>Cook on a skillet with a moderate fire until it becomes viscous and solid.</li>
+      </ol><br>
+      <div  align="center">  
+         <h3>HOW TO MAKE THE SAUCE</h3>
+      </div>
+      <ol>
+          <li>Add belacan, chilli beans, lime juice, a little sugar, a little onion with shrimp in a mortar or blender can.</li>
 
-          Add belacan, chilli beans, lime juice, a little sugar, a little onion with shrimp in a mortar or blender can
+         <li>Punch / crush until crushed.</li>
 
-          Punch / crush until crushed.
-
-          Ready
-      </p>
+          <li>Ready.</li>
+      </ol>
     </ion-list>
   </div>
 </ion-content>
