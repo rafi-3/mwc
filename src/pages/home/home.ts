@@ -25,7 +25,7 @@ export class HomePage {
 
   // hujung hujung ne yg aFauth ah
   constructor(private aFauth: AngularFireAuth, private toast: ToastController, 
-    public navCtrl: NavController, public loadingCtrl: LoadingController) {
+    public navCtrl: NavController, public loadingCtrl: LoadingController, public toastCtrl: ToastController) {
     // button to specific page(controller)
     this.recipeButton ='RecipePage';
     this.loginButton = 'LoginPage';
@@ -54,6 +54,16 @@ export class HomePage {
       duration: 3000,
       dismissOnPageChange: true
     }).present();
+  }
+
+  warning(position: string) {
+    let toast = this.toastCtrl.create({
+      message: 'Please sign in or register',
+      duration: 3000,
+      position: position
+    });
+
+    toast.present(toast);
   }
 
   // this is for discovery banner
